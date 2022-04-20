@@ -1,5 +1,4 @@
 import React from 'react'
-import heroBg from '../img/cpus.jpg';
 
 const Categories = () => {
   return (

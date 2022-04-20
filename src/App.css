@@ -39,7 +39,7 @@
 }
 
 .categories_content_cpu{
-  background-image: url('/src/img/cpus.jpg');
+  background-image: url('../public/img/cpus.jpg');
   height: 300px;
   width: 500px;
   background-repeat: no-repeat;
@@ -49,7 +49,7 @@
 }
 
 .categories_content_gpus{
-  background-image: url('/src/img/gpus.png');
+  background-image: url('../public/img/gpus.png');
   height: 300px;
   width: 500px;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 }
 
 .categories_content_perifericos{
-  background-image: url('/src/img/perifericos.jpg');
+  background-image: url('../public/img/perifericos.jpg');
   height: 300px;
   width: 500px;
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@
 
 .newProducts_grid{
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 250px);
   place-items: center;
   gap: 10px;
 }
@@ -140,6 +140,7 @@
 
 .weekly_offert{
   background-image: linear-gradient(to left bottom, #2f2f2f, #3e3942, #544151, #6d475b, #884e5e, #884e5e, #874e5e, #874e5e, #6c475a, #523f4f, #3c363f, #2c2c2c);
+  min-height: 700px;
 }
 
 .weekly_offert_content_ul ul li{
@@ -152,7 +153,7 @@
   background-color: black;
   padding: 10px;
   border-radius: 10px;
-  width: 80%;
+  width: 100%;
   border: 1px solid #b91c1c;
 }
 
@@ -162,4 +163,51 @@
   color: black
 }
 
+.bestSellers{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1800' height='700' preserveAspectRatio='none' viewBox='0 0 1800 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='1800' height='700' x='0' y='0' fill='url(%23SvgjsLinearGradient1003)'%3e%3c/rect%3e%3cpath d='M0 0L374.19 0L0 130.2z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 130.2L374.19 0L995.6700000000001 0L0 260.44z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 260.44L995.6700000000001 0L1032.66 0L0 375.75z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 375.75L1032.66 0L1142.66 0L0 430.15999999999997z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M1800 700L1409.8600000000001 700L1800 347.39z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M1800 347.39L1409.8600000000001 700L1264.7000000000002 700L1800 342.02z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M1800 342.02L1264.56 700L735.9599999999999 700L1800 183.85999999999999z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M1800 183.86L735.96 700L682.77 700L1800 175.82000000000002z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='1800' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='17.22%25' y1='-55.36%25' x2='82.78%25' y2='155.36%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1003'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 172%2c 235%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.bestSellers_title h2{
+  border-bottom: 5px solid #00aceb;
+}
+
+.bestCellers_info{
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.footer{
+  background-color: #fff;
+}
+
+.itemCount{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  gap: 10px
+}
+
+.itemCount button{
+  width: 30px;
+  height: 30px;
+  background-color: #2563eb;
+  border-radius: 30%;
+}
+
+.itemCount p{
+  width: 30px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:disabled{
+  background-color: #2564eb5d;
+  color: rgba(255, 255, 255, 0.307);
+  cursor: not-allowed;
+}
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import heroBg from '../img/hero_img.png';
+import heroBg from '../../public/img/hero_img.png';
 
 export const Hero = () => {
   return (

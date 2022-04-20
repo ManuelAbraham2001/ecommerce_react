@@ -3,7 +3,7 @@
         "nombre": "Ryzen 5 3600 6-cores 12-threads", 
         "precio": 28000,
         "categoria": "cpu",
-        "img": "/img/cpus.jpg",
+        "img": "./img/cpus.jpg",
         "stock": 5
     },
     { 
@@ -17,7 +17,6 @@
         "precio": 65000,
         "categoria": "cpu",
         "stock": 7
-        
     },
     { 
         "nombre": "Gigabyte Rtx 3060 Ti Aorus Elite 8g", 
@@ -30,17 +29,5 @@
         "precio": 118000,
         "categoria": "gpu",
         "stock": 10
-    },
-    { 
-        "nombre": "Corsair K65 Mini 60%", 
-        "precio": 15000,
-        "categoria": "otros",
-        "stock": 15
-    },
-    { 
-        "nombre": "Mouse G Pro X Superlight", 
-        "precio": 135000,
-        "categoria": "otros",
-        "stock": 2
     }
 ]
