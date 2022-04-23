@@ -1,5 +1,5 @@
 import React from 'react'
-import Prodcuts from './Prodcuts'
+import Item from './Item'
 import products from '../bestSellers.json'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faArrowRotateLeft, faClock, faMoneyBill1, faTruck } from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +14,7 @@ const BestSellers = () => {
             <div className="bestCellers_products w-3/4 flex justify-between items-center my-8 gap-2.5">
                 {
                     products.map(product => {
-                        return <Prodcuts nombre={product.nombre} precio={product.precio} img={product.img} stock={product.stock}></Prodcuts> // envio propiedades
+                        return <Item nombre={product.nombre} precio={product.precio} img={product.img} stock={product.stock}></Item> // envio propiedades
                     })
                 }
             </div>

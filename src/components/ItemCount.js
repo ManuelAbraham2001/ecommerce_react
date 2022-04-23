@@ -7,7 +7,6 @@ const ItemCount = (props) => {
     const [disableRes, setDisableRes] = useState(false)
 
     let add = () => {
-        
         if(count === props.stock){
             setDisableAdd(true)
         }else{
@@ -24,7 +23,6 @@ const ItemCount = (props) => {
         }
         setDisableAdd(false)
     }
-
 
     return (
         <div className='itemCount flex justify-center items-center'>

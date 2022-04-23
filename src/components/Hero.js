@@ -1,5 +1,5 @@
 import React from 'react'
-import heroBg from '../../public/img/hero_img.png';
+// import heroBg from '../img/hero_img.png';
 
 export const Hero = () => {
   return (
@@ -16,7 +16,7 @@ export const Hero = () => {
             <a className='hero_btn_info' href='#'>Mas informacion</a>
         </div> 
         <div>
-            <img src={heroBg}/>
+            <img src="../img/hero_img.png"/>
         </div>
     </div>
     

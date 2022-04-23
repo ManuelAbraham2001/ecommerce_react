@@ -10,12 +10,14 @@
         "nombre": "Intel Core I5 12400f 12gen", 
         "precio": 29000,
         "categoria": "cpu",
+        "img": "/img/cpus.jpg",
         "stock": 3
     },
     { 
         "nombre": "Intel Core I7 12700k 12gen", 
         "precio": 65000,
         "categoria": "cpu",
+        "img": "/img/cpus.jpg",
         "stock": 7
         
     },
@@ -23,24 +25,28 @@
         "nombre": "Gigabyte Rtx 3060 Ti Aorus Elite 8g", 
         "precio": 138000,
         "categoria": "gpu",
+        "img": "../img/cpus.jpg",
         "stock": 4
     },
     { 
         "nombre": "Radeon Rx 6600 Xt Mech 2x 8gb Oc Msi", 
         "precio": 118000,
         "categoria": "gpu",
+        "img": "/img/gpus.png",
         "stock": 10
     },
     { 
         "nombre": "Corsair K65 Mini 60%", 
         "precio": 15000,
         "categoria": "otros",
+        "img": "/img/cpus.jpg",
         "stock": 15
     },
     { 
         "nombre": "Mouse G Pro X Superlight", 
         "precio": 135000,
         "categoria": "otros",
+        "img": "/img/cpus.jpg",
         "stock": 2
     }
 ]

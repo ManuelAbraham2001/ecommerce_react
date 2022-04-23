@@ -1,5 +1,5 @@
 import React from 'react'
-import ofertaImg from '../../public/img/oferta.png'
+// import ofertaImg from '../img/oferta.png'
 
 const WeeklyOffert = () => {
   return (
@@ -7,7 +7,7 @@ const WeeklyOffert = () => {
         <div className='weekly_offert_content flex justify-around items-center w-full'>
 
           <div className='weekly_offert_content_img'>
-            <img src={ofertaImg}></img>
+            <img src="../img/oferta.png"></img>
           </div>
 
           <div className='text-center flex flex-col items-center justify-around h-96'>
