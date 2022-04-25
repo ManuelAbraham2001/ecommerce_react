@@ -1,28 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Item from './Item'
 
 const ItemList = (props) => {
 
   const [filtro, setFiltro] = useState('todo')
 
-  useEffect(() => {
-    const promesa = new Promise((resolve, reject) => {
-      setTimeout(() =>{
-        resolve(props.producto)
-        reject('promesa rechazada')
-      }, 2000)
-    })
-
-    promesa
-    .then(result => {
-      console.log(result)
-    })
-    .catch(err => {
-      console.log(err);
-    })
-
-
-  }, [])
   
   return (
     <>
@@ -36,15 +18,13 @@ const ItemList = (props) => {
       </div>
 
       <div className='newProducts_grid'>
-        {
-          props.producto.map(prod => {
-            if(filtro === prod.categoria){
-              return <Item nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
-            }else if(filtro === 'todo'){
-              return <Item nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
-            }
-          })
-        }
+        {props.producto.map(prod => {
+          if(filtro === prod.categoria){
+            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
+          }else if(filtro === 'todo'){
+            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
+          }
+        })}
       </div>
     </>
   )

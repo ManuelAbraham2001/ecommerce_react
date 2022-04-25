@@ -14,7 +14,7 @@ const BestSellers = () => {
             <div className="bestCellers_products w-3/4 flex justify-between items-center my-8 gap-2.5">
                 {
                     products.map(product => {
-                        return <Item nombre={product.nombre} precio={product.precio} img={product.img} stock={product.stock}></Item> // envio propiedades
+                        return <Item key={product.id} nombre={product.nombre} precio={product.precio} img={product.img} stock={product.stock}></Item> // envio propiedades
                     })
                 }
             </div>

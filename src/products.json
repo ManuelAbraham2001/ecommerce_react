@@ -1,5 +1,6 @@
 [
     { 
+        "id": 1,
         "nombre": "Ryzen 5 3600 6-cores 12-threads", 
         "precio": 28000,
         "categoria": "cpu",
@@ -7,6 +8,7 @@
         "stock": 5
     },
     { 
+        "id": 2,
         "nombre": "Intel Core I5 12400f 12gen", 
         "precio": 29000,
         "categoria": "cpu",
@@ -14,6 +16,7 @@
         "stock": 3
     },
     { 
+        "id": 3,
         "nombre": "Intel Core I7 12700k 12gen", 
         "precio": 65000,
         "categoria": "cpu",
@@ -22,6 +25,7 @@
         
     },
     { 
+        "id": 4,
         "nombre": "Gigabyte Rtx 3060 Ti Aorus Elite 8g", 
         "precio": 138000,
         "categoria": "gpu",
@@ -29,6 +33,7 @@
         "stock": 4
     },
     { 
+        "id": 5,
         "nombre": "Radeon Rx 6600 Xt Mech 2x 8gb Oc Msi", 
         "precio": 118000,
         "categoria": "gpu",
@@ -36,6 +41,7 @@
         "stock": 10
     },
     { 
+        "id": 6,
         "nombre": "Corsair K65 Mini 60%", 
         "precio": 15000,
         "categoria": "otros",
@@ -43,6 +49,7 @@
         "stock": 15
     },
     { 
+        "id": 7,
         "nombre": "Mouse G Pro X Superlight", 
         "precio": 135000,
         "categoria": "otros",

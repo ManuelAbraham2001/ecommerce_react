@@ -1,9 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import products from '../products.json'
+import productsList from '../products.json'
 
 
 export const ItemListContainer = () => {
+
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        const promesa = new Promise((resolve, reject) => {
+            setTimeout(() =>{
+                resolve(productsList)
+                reject('promesa rechazada')
+            }, 2000)
+        })
+    
+        promesa
+        .then(result => {
+            setProducts(result)
+        })
+        .catch(err => {
+           console.log(err);
+        })
+
+    }, [])
+
     return (
         <div className='newProducts flex items-center justify-center flex-col'>
             <div className='newProducts_nav flex items-center justify-between flex-col'>
