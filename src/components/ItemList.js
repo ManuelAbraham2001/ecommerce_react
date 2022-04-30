@@ -20,9 +20,9 @@ const ItemList = (props) => {
       <div className='newProducts_grid'>
         {props.producto.map(prod => {
           if(filtro === prod.categoria){
-            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
+            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock} id={prod.id}></Item>
           }else if(filtro === 'todo'){
-            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock}></Item>
+            return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock} id={prod.id}></Item>
           }
         })}
       </div>

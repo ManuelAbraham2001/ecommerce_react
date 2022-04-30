@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faContactCard, faHouse, faMagnifyingGlass, faShop, faUser} from '@fortawesome/free-solid-svg-icons'
 import {} from '@fortawesome/free-brands-svg-icons'
 import { CartWidget } from './CartWidget'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -12,8 +13,8 @@ const NavBar = () => {
             </div>
             <div>
                 <ul className='inline-flex'>
-                    <li className='mx-3 inline-flex items-center text-black'><button className='font-bold'><FontAwesomeIcon icon={faHouse} className="mr-2 text-color1"/>Inicio</button></li>
-                    <li className='mx-3 inline-flex items-center text-black'><button className='font-bold'><FontAwesomeIcon icon={faShop} className="mr-2 text-color1"/>Tienda</button></li>
+                    <li className='mx-3 inline-flex items-center text-black'><Link to='/'><button className='font-bold'><FontAwesomeIcon icon={faHouse} className="mr-2 text-color1"/>Inicio</button></Link></li>
+                    <li className='mx-3 inline-flex items-center text-black'><Link to='/contador'><button className='font-bold'><FontAwesomeIcon icon={faShop} className="mr-2 text-color1"/>Tienda</button></Link></li>
                     <li className='mx-3 inline-flex items-center text-black'><button className='font-bold'><FontAwesomeIcon icon={faContactCard} className="mr-2 text-color1"/>Contacto</button></li>
                 </ul>
             </div>

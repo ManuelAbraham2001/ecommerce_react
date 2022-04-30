@@ -1,30 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
 import NavBar from './components/NavBar';
-import { Hero } from './components/Hero';
-import Categories from './components/Categories';
-import ItemListContainer from './components/ItemListContainer';
-import WeeklyOffert from './components/WeeklyOffert';
-import BestSellers from './components/BestSellers';
 import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Inicio from './components/Inicio';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <NavBar/>
-      </header>
-      <main>
-        <Hero/>
-        <Categories/>
-        <ItemListContainer/>
-        <WeeklyOffert/>
-        <BestSellers/>
-      </main>
-      <footer>
-        <Footer/>
-      </footer>
+      <BrowserRouter>
+      <header><NavBar/></header>
+      <Routes>
+        <Route path='/' element={<Inicio/>} />  
+        <Route path='/item/:prodId' element={<ItemDetailContainer/>} />
+      </Routes>
+      <footer><Footer/></footer>
+      </BrowserRouter>
     </div>
   );
 }
