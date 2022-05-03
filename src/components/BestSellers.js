@@ -8,9 +8,9 @@ import {} from '@fortawesome/free-brands-svg-icons'
 const BestSellers = () => {
     return (
         <div className='bestSellers w-full h-auto flex items-center justify-center flex-col'>
-            <div className="bestSellers_title">
-                <h2 className='uppercase font-bold text-5xl mt-5 text-white'>Mas vendidos</h2>
-            </div>
+            
+            <h2 className='uppercase font-bold text-5xl mt-5 text-white'>Mas vendidos</h2>
+            
             <div className="bestCellers_products w-3/4 flex justify-between items-center my-8 gap-2.5">
                 {
                     products.map(product => {

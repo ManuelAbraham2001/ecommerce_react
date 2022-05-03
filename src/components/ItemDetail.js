@@ -34,12 +34,19 @@ const ItemDetail = () => {
     
 
   return (
-    <div>
-        <li>{prod.id}</li>
-        <li>{prod.nombre}</li>
-        <li>{prod.precio}</li>
-        <li>{prod.categoria}</li>
-        <img src={prod.img} alt="Shoes"/>
+    <div className='itemDetail'>
+      <div className="itemDetail_content shadow-2xl flex flex-col">
+        <div className='mb-2'>
+          <ul>
+            <li>{prod.id}</li>
+            <li>{prod.nombre}</li>
+            <li>{prod.precio}</li>
+            <li>{prod.categoria}</li>
+            <li><img src={prod.img} alt="Shoes"/></li>
+          </ul>
+        </div>
+        <button className='btn btn-primary w-full font-bold'>Comprar</button>
+      </div>
     </div>
   )
 }

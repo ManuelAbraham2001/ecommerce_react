@@ -15,7 +15,7 @@ const Prodcuts = (props) => {
                         <ItemCount initial={1} stock={props.stock}/>
                     }
                     <div className="card-actions justify-end">
-                    <Link className="w-full" to={`/item/${props.id}`}><button className="btn btn-primary w-full font-bold">Comprar ahora</button></Link>
+                    <Link className="w-full" to={`/item/${props.id}`}><button className="btn btn-primary w-full font-bold">Ver producto</button></Link>
                     </div>
                 </div>
             </div>

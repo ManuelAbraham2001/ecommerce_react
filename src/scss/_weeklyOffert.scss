@@ -1,0 +1,30 @@
+.weekly_offert{
+    background-image: linear-gradient(to left bottom, #2f2f2f, #3e3942, #544151, #6d475b, #884e5e, #884e5e, #874e5e, #874e5e, #6c475a, #523f4f, #3c363f, #2c2c2c);
+    min-height: 700px;
+  }
+  
+  .weekly_offert_content_ul{
+    ul{
+        li{
+            width: 100%;
+            font-size: 25px;
+            font-weight: 600;
+        }
+    }
+
+
+    a{
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        border: 1px solid #b91c1c;
+
+        &:hover{
+            background-color: #b91c1c;
+            border: 1px solid black;
+            color: black
+        }
+    }
+
+  }

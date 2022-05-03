@@ -1,0 +1,30 @@
+.hero_bg{
+    background-image: linear-gradient(to left bottom, #f678c5, #dd73c8, #c16fc8, #a46cc6, #8668c2, #7171ca, #597ad0, #3b81d2, #1197e1, #00aceb, #00c0f1, #0ed4f5);
+    height: 850px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+
+    .hero_ul li{
+        margin: 20px 0;
+    }
+    
+}
+  
+.hero_btn_info{
+    width: 100%;
+    border: 3px solid #2563eb;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #2563eb;
+    color: #fff;
+    font-weight: bold;
+
+    &:hover{
+        opacity: 0.9;
+    }
+}
+  

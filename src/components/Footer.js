@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faLinkedin, faWhatsapp } from '@fortawesome/fr
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div className='footer bg-white'>
         <div className="footer_content p-8 flex items-center justify-center w-full">
             <div className="footer_title">
                 <h2 className='text-3xl text-color1 font-bold'>SMART<span className='text-black font-normal'>SHOP</span></h2>   

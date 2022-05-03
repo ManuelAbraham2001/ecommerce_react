@@ -24,8 +24,7 @@ const WeeklyOffert = () => {
               </ul>
             </div>
 
-            <a className='weekly_offert_content_button text-red-700 font-bold uppercase' href="#">Comprar ahora</a>
-      
+            <a className='text-red-700 font-bold uppercase' href="#">Comprar ahora</a>
           </div>
         </div>
     </div>

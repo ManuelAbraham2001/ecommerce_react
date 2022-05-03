@@ -14,7 +14,7 @@ const NavBar = () => {
             <div>
                 <ul className='inline-flex'>
                     <li className='mx-3 inline-flex items-center text-black'><Link to='/'><button className='font-bold'><FontAwesomeIcon icon={faHouse} className="mr-2 text-color1"/>Inicio</button></Link></li>
-                    <li className='mx-3 inline-flex items-center text-black'><Link to='/contador'><button className='font-bold'><FontAwesomeIcon icon={faShop} className="mr-2 text-color1"/>Tienda</button></Link></li>
+                    <li className='mx-3 inline-flex items-center text-black'><Link to='/tienda'><button className='font-bold'><FontAwesomeIcon icon={faShop} className="mr-2 text-color1"/>Tienda</button></Link></li>
                     <li className='mx-3 inline-flex items-center text-black'><button className='font-bold'><FontAwesomeIcon icon={faContactCard} className="mr-2 text-color1"/>Contacto</button></li>
                 </ul>
             </div>
