@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import productsList from '../products.json'
-import { useParams } from 'react-router-dom'
-import Item from './Item'
 
 
 export const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
-    const {categoria} = useParams()
 
     useEffect(() => {
         const promesa = new Promise((resolve, reject) => {
@@ -32,17 +29,9 @@ export const ItemListContainer = () => {
         <div className='newProducts flex items-center justify-center flex-col'>
             <div className='newProducts_nav flex items-center justify-between flex-col'>
                 <div className='newProducts_nav_title'>
-                    <h2 className='text-bold text-5xl uppercase'>{categoria}</h2>
+                    <h2 className='text-bold text-5xl uppercase'>Ultimos ingresos</h2>
                 </div>
-                <div className='newProducts_grid'>
-                    {
-                    products.map(prod => {
-                        if(prod.categoria === categoria){
-                        return <Item key={prod.id} nombre={prod.nombre} precio={prod.precio} img={prod.img} stock={prod.stock} id={prod.id}></Item>
-                        }
-                    })
-                    }
-                </div>
+                <ItemList producto={products}></ItemList>
             </div>
         </div>
     )

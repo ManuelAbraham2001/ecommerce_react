@@ -2,7 +2,7 @@ import React from 'react'
 import BestSellers from './BestSellers'
 import Categories from './Categories'
 import { Hero } from './Hero'
-import ItemListContainer from './ItemListContainer'
+import NewProducts from './NewProducts'
 import WeeklyOffert from './WeeklyOffert'
 
 const Inicio = () => {
@@ -10,7 +10,7 @@ const Inicio = () => {
     <main>
         <Hero/>
         <Categories/>
-        <ItemListContainer/>
+        <NewProducts/>
         <WeeklyOffert/>
         <BestSellers/>
     </main>

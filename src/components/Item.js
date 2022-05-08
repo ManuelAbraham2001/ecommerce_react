@@ -6,7 +6,7 @@ const Prodcuts = (props) => {
 
     return (
         <div className='newProducts_grid_item'>
-            <div className="card w-full bg-base-100 shadow-xl h-96">
+            <div className="card w-full bg-base-100 shadow-xl">
                 <figure><img src={props.img} alt="Shoes"/></figure>
                 <div className="card-body text-center">
                     <h2 className="text-xl min-h-20">{props.nombre}</h2>

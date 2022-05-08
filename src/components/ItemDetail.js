@@ -1,54 +1,43 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import products from '../products.json'
+import { Link } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
-const ItemDetail = () => {
 
-    const {prodId} = useParams()
-    const [prod, setPord] = useState({})
+const ItemDetail = (props) => {
 
-    useEffect(() => {
-        
-        //  products.map(product => {
-        //      if(product.id == prodId){
-        //          setPord(product);
-        //     }
-        // })
-
-        const promesa = new Promise((resolve, reject) => {
-          setTimeout(() => {
-              resolve(products)
-              reject('promesa rechazada')
-          }, 2000)
-      })
-  
-      promesa
-      .then(result => {
-        setPord(result.find(result => result.id == prodId))
-      })
-      .catch(err => {
-         console.log(err);
-      })
-
-    }, [prodId])
-    
+  const [inCart, setIncart] = useState(false)
 
   return (
     <div className='itemDetail'>
       <div className="itemDetail_content shadow-2xl flex flex-col">
         <div className='mb-2'>
-          <ul>
-            <li>{prod.id}</li>
-            <li>{prod.nombre}</li>
-            <li>{prod.precio}</li>
-            <li>{prod.categoria}</li>
-            <li><img src={prod.img} alt="Shoes"/></li>
+          <ul className='mb-2'>
+            <li>{props.id}</li>
+            <li>{props.nombre}</li>
+            <li>{props.precio}</li>
+            <li>{props.categoria}</li>
+            <li><img src={props.img} alt="Shoes"/></li>
           </ul>
+          {inCart ? (
+              <div>
+                <p>El producto esta en el Carrito!</p>
+                <Link to={`/cart`}><button className="btn btn-primary">VER CARRITO</button></Link>
+              </div>
+              ) : (
+              <div> 
+                <ItemCount stock={props.stock} initial={1}/>
+                <button className='btn btn-primary w-full font-bold mb-2'>Comprar</button>
+                <button onClick = {() => setIncart(true)} className="btn btn-primary w-full font-bold">Agregar al carrito</button>
+              </div>                 
+          )}
+
         </div>
-        <button className='btn btn-primary w-full font-bold'>Comprar</button>
+
       </div>
     </div>
   )
 }
+
+
 
 export default ItemDetail
