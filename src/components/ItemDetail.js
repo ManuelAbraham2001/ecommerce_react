@@ -7,6 +7,11 @@ const ItemDetail = (props) => {
 
   const [inCart, setIncart] = useState(false)
 
+  const onAdd = (count) => {
+    setIncart(true)
+    console.log(count);
+  }
+
   return (
     <div className='itemDetail'>
       <div className="itemDetail_content shadow-2xl flex flex-col">
@@ -25,14 +30,10 @@ const ItemDetail = (props) => {
               </div>
               ) : (
               <div> 
-                <ItemCount stock={props.stock} initial={1}/>
-                <button className='btn btn-primary w-full font-bold mb-2'>Comprar</button>
-                <button onClick = {() => setIncart(true)} className="btn btn-primary w-full font-bold">Agregar al carrito</button>
+                <ItemCount stock={props.stock} initial={1} id={props.id} onAdd={onAdd}/>
               </div>                 
           )}
-
         </div>
-
       </div>
     </div>
   )
