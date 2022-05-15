@@ -1,4 +1,4 @@
-import React, { Children, createContext, useContext, useState } from 'react'
+import React, {createContext, useContext, useState } from 'react'
 
 const CartContext = createContext()
 
@@ -41,7 +41,6 @@ const CartContextProvider = ({children}) => {
 
     const deleteCart = () => setCart([])
 
-    console.log(cart)
 
   return (
     <CartContext.Provider value={{cart, addToCart, deleteCart, deleteFromCart, setCart}}>{children}</CartContext.Provider>
