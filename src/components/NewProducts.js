@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import productsList from '../products.json'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 
 export const ItemListContainer = () => {
@@ -8,21 +9,15 @@ export const ItemListContainer = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        const promesa = new Promise((resolve, reject) => {
-            setTimeout(() =>{
-                resolve(productsList)
-                reject('promesa rechazada')
-            }, 2000)
-        })
-    
-        promesa
-        .then(result => {
-            setProducts(result)
-        })
-        .catch(err => {
-           console.log(err);
-        })
-
+      const db = getFirestore()
+      const itemsCollection = collection(db, "items")
+      getDocs( itemsCollection ).then ( snapshop =>{
+          const productsList = []
+          snapshop.docs.forEach( s => { 
+              productsList.push ( { id: s.id, ...s.data()} )
+           })
+           setProducts( productsList )
+      })
     }, [])
 
     return (

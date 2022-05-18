@@ -3,29 +3,44 @@ import ItemList from './ItemList'
 import productsList from '../products.json'
 import { useParams } from 'react-router-dom'
 import Item from './Item'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 
 export const ItemListContainer = () => {
 
-    const [products, setProducts] = useState([])
     const {categoria} = useParams()
 
-    useEffect(() => {
-        const promesa = new Promise((resolve, reject) => {
-            setTimeout(() =>{
-                resolve(productsList)
-                reject('promesa rechazada')
-            }, 2000)
-        })
+    // useEffect(() => {
+    //     const promesa = new Promise((resolve, reject) => {
+    //         setTimeout(() =>{
+    //             resolve(productsList)
+    //             reject('promesa rechazada')
+    //         }, 2000)
+    //     })
     
-        promesa
-        .then(result => {
-            setProducts(result)
-        })
-        .catch(err => {
-           console.log(err);
-        })
+    //     promesa
+    //     .then(result => {
+    //         setProducts(result)
+    //     })
+    //     .catch(err => {
+    //        console.log(err);
+    //     })
 
+    // }, [])
+
+    const [products, setProducts] = useState([])
+
+
+    useEffect(() => {
+      const db = getFirestore()
+      const itemsCollection = collection(db, "items")
+      getDocs( itemsCollection ).then ( snapshop =>{
+          const productsList = []
+          snapshop.docs.forEach( s => { 
+              productsList.push ( { id: s.id, ...s.data()} )
+           })
+           setProducts( productsList )
+      })
     }, [])
 
     return (
