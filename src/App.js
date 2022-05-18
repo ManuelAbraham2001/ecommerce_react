@@ -43,8 +43,6 @@ function App() {
             <Route path='/tienda' element={<Tienda/>}/>
             <Route path='/tienda/:categoria' element={<ItemListContainer/>}/> 
             <Route path='/cart' element={<Cart/>}/>
-            <Route path='/product' element={<Products/>}/>
-            <Route path='/productDetail/' element={<ProductDetail/>}/>
           </Routes>
           <footer><Footer/></footer>
           </BrowserRouter>

@@ -3,6 +3,7 @@ import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import products from '../products.json'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import ProductDetail from './ProductDetail'
 
 const ItemDetailContainer = () => {
 
@@ -50,7 +51,7 @@ const ItemDetailContainer = () => {
   }, [])
 
   return (
-    <div><ItemDetail key={products.id} nombre={products.nombre} precio={products.precio} img={products.img} stock={products.stock} id={products.id}/></div>
+    <div><ProductDetail key={products.id} nombre={products.nombre} precio={products.precio} img={products.img} stock={products.stock} id={products.id}/></div>
   )
 }
 
