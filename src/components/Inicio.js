@@ -8,11 +8,11 @@ import WeeklyOffert from './WeeklyOffert'
 const Inicio = () => {
   return (
     <main>
-        <Hero/>
-        <Categories/>
+        {/* <Hero/>
+        <Categories/> */}
         <NewProducts/>
-        <WeeklyOffert/>
-        <BestSellers/>
+        {/* <WeeklyOffert/>
+        <BestSellers/> */}
     </main>
   )
 }

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const Tienda = () => {
 
-     const categorias = [
-        {categoria: 'cpu', titulo: 'Procesadores'}, {categoria: 'gpu', titulo: 'Placas de video'}, {categoria: 'perifericos', titulo: 'Perifericos'}
+    const categorias = [
+      {categoria: 'cpu', titulo: 'Procesadores'}, {categoria: 'gpu', titulo: 'Placas de video'}, {categoria: 'perifericos', titulo: 'Perifericos'}
     ]
 
   return (

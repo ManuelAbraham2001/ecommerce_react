@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useCartContext } from './Context/CartContext'
 import { useAppContext } from './Context/AppContext'
 
-const ItemCount = (props, {onAdd}, id) => {
+const ItemCount = (props) => {
     
     const [count, setCount] = useState(props.initial)
     const [disableAdd, setDisableAdd] = useState(false)
@@ -39,7 +39,7 @@ const ItemCount = (props, {onAdd}, id) => {
         }
 
         addToCart(findProduct, cantidad)
-        onAdd(count)
+        props.onAdd(count)
     }
 
     return (
@@ -49,7 +49,7 @@ const ItemCount = (props, {onAdd}, id) => {
             <p className="itemCount_cant text-white">{count}</p>
             <button onClick={add} disabled={disableAdd} className="itemCount_increment text-white">+</button>
         </div>
-        <button onClick={() => handleClick(id, count)} className="btn btn-primary w-full font-bold">Agregar al carrito</button>
+        <button onClick={() => handleClick(props.id, count)} className="btn btn-primary w-full font-bold">Agregar al carrito</button>
         </>
     )
 }

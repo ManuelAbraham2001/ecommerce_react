@@ -12,6 +12,8 @@ const ItemDetail = (props) => {
     console.log(count);
   }
 
+  console.log(inCart);
+
   return (
     <div className='itemDetail'>
       <div className="itemDetail_content shadow-2xl flex flex-col">
@@ -30,8 +32,8 @@ const ItemDetail = (props) => {
               </div>
               ) : (
               <div> 
-                <ItemCount stock={props.stock} initial={1} id={props.id} onAdd={onAdd}/>
-              </div>                 
+                <ItemCount stock={props.stock} initial={1} id={props.id} onAdd={onAdd()}/>
+              </div>               
           )}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import ItemCount from "./ItemCount"
 
 const ProductDetail = () => {
 
@@ -20,6 +21,13 @@ const ProductDetail = () => {
     //         }
     //     })
     // }, [])
+
+    const [inCart, setIncart] = useState(false)
+
+    const onAdd = (count) => {
+      setIncart(true)
+      console.log(count);
+    }
 
     const [products, setProducts] = useState([])
     const {prodId} = useParams()
@@ -43,19 +51,36 @@ const ProductDetail = () => {
         <>
             {
                 products.map(prod => {
+                    console.log(prod);
                     if(prodId == prod.id){
-                        return <div>
-                        <div>ProductDetail</div>
-                        <div>{prod.nombre}</div>
-                        <div>{prod.precio}</div>
-                        <div>{prod.stock}</div>
-                        <div>{prod.categoria}</div>
+                    return <div>
+                        <div className='itemDetail'>
+                            <div className="itemDetail_content shadow-2xl flex flex-col">
+                                <div className='mb-2'>
+                                    <ul className='mb-2'>
+                                    <li>{prod.id}</li>
+                                    <li>{prod.nombre}</li>
+                                    <li>{prod.precio}</li>
+                                    <li>{prod.categoria}</li>
+                                    <li><img src={prod.img} alt="Shoes"/></li>
+                                    </ul>
+                                    {inCart ? (
+                                        <div>
+                                        <p>El producto esta en el Carrito!</p>
+                                        <Link to={`/cart`}><button className="btn btn-primary">VER CARRITO</button></Link>
+                                        </div>
+                                        ) : (
+                                        <div> 
+                                        <ItemCount stock={prod.stock} initial={1} id={prod.id} onAdd={onAdd}/>
+                                        </div>                 
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     }
                 })
             }
-
-
         </>
     )
 }
