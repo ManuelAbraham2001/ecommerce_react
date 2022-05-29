@@ -35,13 +35,17 @@ const Cart = () => {
             cart.length == 0 ? <Link to={`/`}><button className="btn btn-primary">Volver</button></Link> 
             :
             cart.map(prod => {
-                return <div className='prod_cart'>
+                return <>
+                <div className='prod_cart'>
                         <img src={prod.img} width="200px" height="200px"></img>
                         <h2>{prod.nombre}</h2>
                         <p>{prod.precio}</p>
                         <p>{prod.quantity}</p>
                         <button onClick={() => eliminar(prod)}>Eliminar</button>
+                        
                 </div>
+                { total > 0 ? <Link to={`/checkout`}><button className="btn">CHECKOUT</button></Link> : "" }
+                </>
             })}
         </div>
         <p>total={total}</p>
