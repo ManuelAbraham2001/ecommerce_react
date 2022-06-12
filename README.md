@@ -7,5 +7,5 @@ Implementacion de:
                     -Tailwind
                     -Firebase
                     
-![Alt Text](https://media.giphy.com/media/ODxDwu3VzKHkWaE2aD/giphy.gif)
+<img src="/images/output/video1.gif" width="500"/>
 
