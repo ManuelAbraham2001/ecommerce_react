@@ -6,6 +6,7 @@ Implementacion de:
                     -Router
                     -Tailwind
                     -Firebase
-                    
-<img src="/images/output/video1.gif" width="500"/>
+
+<img src="https://media.giphy.com/media/ODxDwu3VzKHkWaE2aD/giphy.gif" width="250" height="250"/>
+
 
