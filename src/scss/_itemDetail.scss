@@ -3,7 +3,6 @@
     justify-content: center;
     height: 100vh;
     align-items: center;
-    border: 1px solid red;
 }
 
 .itemDetail_content{
@@ -11,7 +10,7 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    border: 1px solid green;
+    border-radius: 20px;
     padding: 20px;
     ul{
         li{

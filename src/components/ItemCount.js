@@ -44,7 +44,7 @@ const ItemCount = (props) => {
 
     return (
         <>
-        <div className='itemCount flex justify-center items-center'>
+        <div className='itemCount flex justify-center items-center mb-5'>
             <button onClick={res} disabled={disableRes} className="itemCount_decrement text-white">-</button>
             <p className="itemCount_cant text-white">{count}</p>
             <button onClick={add} disabled={disableAdd} className="itemCount_increment text-white">+</button>

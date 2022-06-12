@@ -11,10 +11,10 @@ const Tienda = () => {
 
   return (
     <div className='tienda'>
-        <h2 className='text-center text-black text-5xl'>Categorias</h2>
+        <h2 className='text-center text-black text-5xl p-12'>Categorias</h2>
         <ul className='inline-flex flex justify-around items-center w-full'>
             {categorias.map(cat => {
-                return <li><Link to={`/tienda/${cat.categoria}`}><button>{cat.titulo}</button></Link></li>
+                return <li><Link to={`/tienda/${cat.categoria}`}><button className='bg-color1'>{cat.titulo}</button></Link></li>
             })}
         </ul>
     </div>

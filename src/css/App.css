@@ -199,7 +199,6 @@
   justify-content: center;
   height: 100vh;
   align-items: center;
-  border: 1px solid red;
 }
 
 .itemDetail_content {
@@ -207,7 +206,7 @@
   align-items: center;
   justify-content: center;
   width: 50%;
-  border: 1px solid green;
+  border-radius: 20px;
   padding: 20px;
 }
 .itemDetail_content ul li img {
@@ -220,9 +219,47 @@
 }
 .tienda ul li button {
   padding: 20px;
-  background-color: red;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
+}
+
+.cart {
+  border-radius: 20px;
+}
+.cart .cart_card {
+  width: 400px;
+  height: 200px;
+}
+.cart .btn_delete {
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.alert_block {
+  display: none;
+}
+
+.checkout_buttons {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.checkout_buttons button {
+  background-color: black;
+  padding: 10px;
+  width: 200px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.cart_void {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=App.css.map */
