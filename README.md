@@ -7,6 +7,6 @@ Implementacion de:
                     -Tailwind
                     -Firebase
 
-<img src="https://media.giphy.com/media/ODxDwu3VzKHkWaE2aD/giphy.gif" width="250" height="250"/>
+<img src="https://media.giphy.com/media/ODxDwu3VzKHkWaE2aD/giphy.gif" width="800"/>
 
 
